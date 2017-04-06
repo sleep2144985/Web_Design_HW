@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>bad score</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style media="screen">
+    .myCon
+    {
+      width: 20%;
+    }
+    #func,#ac{
+      width: 8%;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Peace</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="page-header">
+  <h1>Bad score</h1>
+</div>
+<div class="form-group">
+<input class="form-control myCon" id="a" type="text">
+  </div>
+          <div class="form-group">
+  <button class="form-control" id="ac" type="button" onclick="Complex()">Submit</button>
+</div>
+  <div class="form-group">
+    <button class="form-control" id="ac" type="button" onclick="Clear()">Clear</button>
+  </div>
+  <div class="form-group">
+    <label value="" style="display:inline;">Answer:</label>
+  <label id="ans" value="" style="display:none;"></label>
+  </div>
+  </div>
+</body>
+<script type="text/javascript">
+function Complex()
+{
+  var a =parseFloat(document.getElementById("a").value);
+  var c;
+  if(a>=60)
+  {
+    c="及格"
+  }
+  else {
+    c="不及格"
+  }
+  ans.innerHTML= c;
+  ans.style.display = 'inline';
+}
+function Clear()
+{
+  document.getElementById("a").value="";
+}
+</script>
+</html>
